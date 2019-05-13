@@ -1,0 +1,6 @@
+databaseChangeLog: 
+ - include: 
+     file: db/changelog/NEXSURVEY_STRUCTURE.xml
+ - include: 
+     file: db/changelog/NEXSURVEY_DATA.xml
+     

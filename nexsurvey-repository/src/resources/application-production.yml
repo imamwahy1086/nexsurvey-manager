@@ -1,0 +1,19 @@
+nexsurvey:
+  mysql:
+    username: ${NEXWEB_MYSQL_USERNAME}
+    password: ${NEXWEB_MYSQL_PASSWORD}
+    url: ${NEXWEB_MYSQL_URL}
+  elasticsearch:
+    cluster:
+      name: ${NEXWEB_ESCLUST_NAME}
+      nodes: ${NEXWEB_ESCLUST_NODES}
+  redis:
+    host: ${NEXWEB_REDIS_HOST}
+    port: ${NEXWEB_REDIS_PORT}
+    database: ${NEXWEB_REDIS_DBIDX}
+  file:
+    upload: 
+      public: ${NEXWEB_DIR_FILE_UPLOAD_PUBLIC}
+      private: ${NEXWEB_DIR_FILE_UPLOAD_PRIVATE}
+server:
+  address: 127.0.0.1

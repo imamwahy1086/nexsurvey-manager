@@ -1,0 +1,19 @@
+server:
+  port: 9001
+nexweb:
+  mysql:
+    username: root
+    password: paramadaksa
+    url: jdbc:mysql://localhost:3306/nexsurvey?useSSL=false
+  elasticsearch:
+    cluster:
+      name: elasticsearch
+      nodes: localhost:9300
+  redis:
+    host: localhost
+    port: 6379
+    database: 2
+  file:
+    upload: 
+      public: D:/NEX/project/nexweb/nexweb-ui/public/
+      private: D:/NEX/project/nexweb/nexweb-ui/private/

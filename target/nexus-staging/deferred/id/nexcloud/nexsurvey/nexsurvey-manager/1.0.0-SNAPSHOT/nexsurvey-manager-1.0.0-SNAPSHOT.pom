@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>id.nexcloud.nexsurvey</groupId>
+	<artifactId>nexsurvey-manager</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+	<name>nexsurvey-manager</name>
+
+
+	<repositories>
+		<repository>
+			<id>maven-public</id>
+			<url>http://nexus.nexsoft.co.id:8081/repository/maven-public/</url>
+		</repository>
+		<repository>
+			<id>nexsoft-releases</id>
+			<url>http://nexus.nexsoft.co.id:8081/repository/nexsoft-releases/</url>
+		</repository>
+	</repositories>
+
+	<properties>
+		<spring.boot.version>2.0.3.RELEASE</spring.boot.version>
+		<spring.version>5.0.7.RELEASE</spring.version>
+
+		<nexsurvey.version>1.0.0-SNAPSHOT</nexsurvey.version>
+
+		<maven.compiler.source>1.8</maven.compiler.source>
+		<maven.compiler.target>1.8</maven.compiler.target>
+
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+		<maven-deploy-plugin.version>2.8.2</maven-deploy-plugin.version>
+		<maven-release-plugin.version>2.5.3</maven-release-plugin.version>
+		<nexus-staging-maven-plugin>1.6.6</nexus-staging-maven-plugin>
+
+		<javax-interceptor.version>1.2</javax-interceptor.version>
+	</properties>
+
+
+	<distributionManagement>
+		<repository>
+			<id>nexpoll-releases</id>
+			<name>nexpoll-releases</name>
+			<url>http://nexus.nexsoft.co.id:8081/repository/nexpoll-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>nexpoll-snapshots</id>
+			<name>nexpoll-snapshots</name>
+			<url>http://nexus.nexsoft.co.id:8081/repository/nexpoll-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- Spring Managed Dependencies -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>${spring.boot.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<!-- Nex Solution -->
+			<dependency>
+				<groupId>id.nexcloud.nexsurvey</groupId>
+				<artifactId>nexsurvey-rest</artifactId>
+				<version>${nexsurvey.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>id.nexcloud.nexsurvey</groupId>
+				<artifactId>nexsurvey-service</artifactId>
+				<version>${nexsurvey.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>id.nexcloud.nexsurvey</groupId>
+				<artifactId>nexsurvey-repository</artifactId>
+				<version>${nexsurvey.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>id.nexcloud.nexsurvey</groupId>
+				<artifactId>nexsurvey-security</artifactId>
+				<version>${nexsurvey.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<!-- Apache Lombok -->
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<!-- Spring Starter -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter</artifactId>
+		</dependency>
+		<!-- Spring Test -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+
+		<!-- Fix for Maven Release Plugin -->
+		<!-- See https://stackoverflow.com/questions/27808734/jdk8-error-class-file-for-javax-interceptor-interceptorbinding-not-found-whe -->
+		<dependency>
+			<groupId>javax.interceptor</groupId>
+			<artifactId>javax.interceptor-api</artifactId>
+			<version>${javax-interceptor.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-commons</artifactId>
+		</dependency>
+
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>${maven-deploy-plugin.version}</version>
+				<configuration>
+					<skip>true</skip>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-release-plugin</artifactId>
+				<version>${maven-release-plugin.version}</version>
+				<configuration>
+					<tagNameFormat>@{project.version}</tagNameFormat>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+					<releaseProfiles>releases</releaseProfiles>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.sonatype.plugins</groupId>
+				<artifactId>nexus-staging-maven-plugin</artifactId>
+				<version>${nexus-staging-maven-plugin}</version>
+				<executions>
+					<execution>
+						<id>default-deploy</id>
+						<phase>deploy</phase>
+						<goals>
+							<goal>deploy</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<serverId>nexsurvey-snapshots</serverId>
+					<nexusUrl>http://nexus.nexsoft.co.id:8081/</nexusUrl>
+					<skipStaging>true</skipStaging>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<profiles>
+		<profile>
+			<id>local</id>
+			<properties>
+				<activeProfile>local</activeProfile>
+			</properties>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+		</profile>
+		<profile>
+			<id>dev</id>
+			<properties>
+				<activeProfile>dev</activeProfile>
+			</properties>
+		</profile>
+		<profile>
+			<id>production</id>
+			<properties>
+				<activeProfile>production</activeProfile>
+			</properties>
+		</profile>
+		<profile>
+			<id>releases</id>
+			<properties>
+				<activeProfile>production</activeProfile>
+			</properties>
+			<build>
+				<plugins>
+					<plugin>
+						<groupId>org.sonatype.plugins</groupId>
+						<artifactId>nexus-staging-maven-plugin</artifactId>
+						<version>${nexus-staging-maven-plugin}</version>
+						<executions>
+							<execution>
+								<id>default-deploy</id>
+								<phase>deploy</phase>
+								<goals>
+									<goal>deploy</goal>
+								</goals>
+							</execution>
+						</executions>
+						<configuration>
+							<serverId>nexsurvey-releases</serverId>
+							<nexusUrl>http://nexus.nexsoft.co.id:8081</nexusUrl>
+							<skipStaging>true</skipStaging>
+						</configuration>
+					</plugin>
+				</plugins>
+			</build>
+		</profile>
+	</profiles>
+	<modules>
+		<module>nexsurvey-rest</module>
+		<module>nexsurvey-repository</module>
+		<module>nexsurvey-service</module>
+		<module>nexsurvey-security</module>
+	</modules>
+</project>

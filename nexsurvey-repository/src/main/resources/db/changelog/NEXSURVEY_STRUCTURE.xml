@@ -1,0 +1,166 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+	<changeSet author="user (generated)"
+		id="NEXSURVEY-JAN29201901">
+		<createTable tableName="customer">
+			<column autoIncrement="true" name="id" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="principalID" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="distributorID" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="customerCode" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="customerName" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="customerAddress1" type="VARCHAR(255)" />
+			<column name="customerAddress2" type="VARCHAR(255)" />
+			<column name="customerKodePos" type="VARCHAR(255)" />
+			<column name="customerCity" type="VARCHAR(255)" />
+			<column name="customerPhone" type="VARCHAR(255)" />
+			<column name="customerType" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="customerSubtype" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="customerKeyAccount" type="VARCHAR(255)" />
+			<column name="customerLatitude" type="VARCHAR(255)" />
+			<column name="customerLongitude" type="VARCHAR(255)" />
+			<column name="npwpNumber" type="VARCHAR(255)" />
+			<column name="npwpName" type="VARCHAR(255)" />
+			<column name="npwpAddress" type="VARCHAR(255)" />				
+			<column name="visitDate" type="date" />
+			<column name="created_by" type="VARCHAR(255)" />
+			<column name="created_date" type="datetime" />
+			<column name="modified_by" type="VARCHAR(255)" />
+			<column name="modified_date" type="datetime" />
+		</createTable>
+	</changeSet>
+	
+	<changeSet author="user (generated)"
+		id="NEXSURVEY-JAN29201902">
+		<createTable tableName="productInStore">
+			<column autoIncrement="true" name="id" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="customer_ID" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="productCode" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="productName" type="VARCHAR(255)"/>
+			<column name="productPackaging" type="VARCHAR(255)"/>
+			<column name="uom1" type="VARCHAR(255)"/>			
+			<column name="uom2" type="VARCHAR(255)"/>
+			<column name="uom3" type="VARCHAR(255)"/>
+			<column name="uom4" type="VARCHAR(255)"/>
+			<column name="uom1Qty" type="INT"/>
+			<column name="uom2Qty" type="INT"/>
+			<column name="uom3Qty" type="INT"/>
+			<column name="uom4Qty" type="INT"/>
+			<column name="productCategoryID" type="VARCHAR(255)"/>
+			<column name="productCategoryName" type="VARCHAR(255)"/>
+			<column name="productGroup1" type="VARCHAR(255)"/>
+			<column name="productGroup1Name" type="VARCHAR(255)"/>
+			<column name="productGroup2" type="VARCHAR(255)"/>
+			<column name="productGroup2Name" type="VARCHAR(255)"/>
+			<column name="productGroup3" type="VARCHAR(255)"/>
+			<column name="productGroup3Name" type="VARCHAR(255)"/>
+			<column name="goodStock" type="INT"/>
+			<column name="badStock" type="INT"/>
+			<column name="sellingPrice" type="DOUBLE"/>
+			<column name="isMSl" type="VARCHAR(255)" />			
+			<column name="visitDate" type="date" />	
+			<column name="created_by" type="VARCHAR(255)" />
+			<column name="created_date" type="datetime" />
+			<column name="modified_by" type="VARCHAR(255)" />
+			<column name="modified_date" type="datetime" />
+		</createTable>	
+	</changeSet>
+	
+	<changeSet author="user (generated)"
+		id="NEXSURVEY-JAN29201903">
+		<createTable tableName="noteStore">
+			<column autoIncrement="true" name="id" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="customer_ID" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="noteCategory" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="noteDescription" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="visitDate" type="date" />
+			<column name="created_by" type="VARCHAR(255)" />
+			<column name="created_date" type="datetime" />
+			<column name="modified_by" type="VARCHAR(255)" />
+			<column name="modified_date" type="datetime" />
+		</createTable>
+	</changeSet>
+	
+	<changeSet author="user (generated)"
+		id="NEXSURVEY-JAN29201904">
+		<createTable tableName="competitor">
+			<column autoIncrement="true" name="id" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="customer_ID" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="competitorName" type="VARCHAR(255)" />
+			<column name="prodCompetitor" type="VARCHAR(255)" />
+			<column name="jenisPromo" type="VARCHAR(255)" />
+			<column name="mekanismePromo" type="VARCHAR(255)" />
+			<column name="periodePromo" type="VARCHAR(255)" />
+			<column name="impactPromo" type="VARCHAR(255)" />
+			<column name="visitDate" type="date" />
+			<column name="created_by" type="VARCHAR(255)" />
+			<column name="created_date" type="datetime" />
+			<column name="modified_by" type="VARCHAR(255)" />
+			<column name="modified_date" type="datetime" />
+		</createTable>
+	</changeSet>
+	
+	<changeSet author="user (generated)"
+		id="NEXSURVEY-JAN29201905">
+		<createTable tableName="implementationPromo">
+			<column autoIncrement="true" name="id" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="customer_ID" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="promoID" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="promoName" type="VARCHAR(255)" />
+			<column name="referenceNumber" type="VARCHAR(255)" />
+			<column name="isAvailable" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="visitDate" type="date" />
+			<column name="validFrom" type="date" />
+			<column name="validThru" type="date" />
+			<column name="created_by" type="VARCHAR(255)" />
+			<column name="created_date" type="datetime" />
+			<column name="modified_by" type="VARCHAR(255)" />
+			<column name="modified_date" type="datetime" />
+		</createTable>
+	</changeSet>
+	
+</databaseChangeLog>

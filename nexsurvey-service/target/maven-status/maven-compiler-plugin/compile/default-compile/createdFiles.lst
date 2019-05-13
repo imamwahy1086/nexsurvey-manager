@@ -1,0 +1,3 @@
+id\nexcloud\nexsurvey\service\customerService.class
+id\nexcloud\nexsurvey\service\helper\HibernateProxyTypeAdapter.class
+id\nexcloud\nexsurvey\service\helper\HibernateProxyTypeAdapter$1.class

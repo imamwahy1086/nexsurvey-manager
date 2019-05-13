@@ -1,0 +1,20 @@
+server:
+  port: ${NEXSURVEY_PORT}
+  address: ${NEXSURVEY_ADDRESS}
+nexsurvey:
+  mysql:
+    username: ${NEXSURVEY_MYSQL_USERNAME}
+    password: ${NEXSURVEY_MYSQL_PASSWORD}
+    url: ${NEXSURVEY_MYSQL_URL}
+  elasticsearch:
+    cluster:
+      name: ${NEXSURVEY_ESCLUST_NAME}
+      nodes: ${NEXSURVEY_ESCLUST_NODES}
+  redis:
+    host: ${NEXSURVEY_REDIS_HOST}
+    port: ${NEXSURVEY_REDIS_PORT}
+    database: ${NEXSURVEY_REDIS_DBIDX}
+  file:
+    upload: 
+      public: ${NEXSURVEY_DIR_FILE_UPLOAD_PUBLIC}
+      private: ${NEXSURVEY_DIR_FILE_UPLOAD_PRIVATE}

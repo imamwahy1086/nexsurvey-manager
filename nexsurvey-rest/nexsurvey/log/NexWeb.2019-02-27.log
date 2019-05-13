@@ -1,0 +1,14 @@
+2019-02-27 09:03:47 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14h31m5s202ms697µs353ns).
+2019-02-27 13:53:55 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=4h3m48s119ms537µs).
+2019-02-27 16:04:42 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=48m46s810ms141µs190ns).
+2019-02-27 16:27:35 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+2019-02-27 16:27:35 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Closing org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext@6bc8e974: startup date [Tue Feb 26 10:34:45 ICT 2019]; root of context hierarchy
+2019-02-27 16:27:35 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans on shutdown
+2019-02-27 16:27:35 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.j.e.a.AnnotationMBeanExporter - Unregistering JMX-exposed beans
+2019-02-27 16:27:35 [RMI TCP Connection(2)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2019-02-27 16:27:35 [RMI TCP Connection(2)-127.0.0.1] DEBUG o.h.internal.SessionFactoryImpl - HHH000031: Closing
+2019-02-27 16:27:35 [RMI TCP Connection(2)-127.0.0.1] DEBUG o.h.engine.spi.CascadeStyles - External cascade style registration [persist : STYLE_PERSIST] overrode base registration [STYLE_PERSIST_SKIPLAZY]
+2019-02-27 16:27:35 [RMI TCP Connection(2)-127.0.0.1] DEBUG o.h.s.i.AbstractServiceRegistryImpl - Implicitly destroying ServiceRegistry on de-registration of all child ServiceRegistries
+2019-02-27 16:27:35 [RMI TCP Connection(2)-127.0.0.1] DEBUG o.h.b.r.i.BootstrapServiceRegistryImpl - Implicitly destroying Boot-strap registry on de-registration of all child ServiceRegistries
+2019-02-27 16:27:35 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2019-02-27 16:27:35 [RMI TCP Connection(2)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

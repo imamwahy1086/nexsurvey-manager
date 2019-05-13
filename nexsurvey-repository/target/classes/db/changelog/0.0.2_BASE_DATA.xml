@@ -1,0 +1,787 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+	<property name="now" value="CURRENT_TIMESTAMP" dbms="mysql" />
+
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085200">
+		<insert tableName="mst_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="code" value="CREATE_ROLE" />
+			<column name="name" value="CREATE ROLE" />
+		</insert>
+		<insert tableName="mst_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="code" value="READ_ROLE" />
+			<column name="name" value="READ ROLE" />
+		</insert>
+		<insert tableName="mst_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="code" value="UPDATE_ROLE" />
+			<column name="name" value="UPDATE ROLE" />
+		</insert>
+		<insert tableName="mst_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="code" value="DELETE_ROLE" />
+			<column name="name" value="DELETE ROLE" />
+		</insert>
+		<insert tableName="mst_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="code" value="CREATE_USER" />
+			<column name="name" value="CREATE USER" />
+		</insert>
+		<insert tableName="mst_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="code" value="READ_USER" />
+			<column name="name" value="READ USER" />
+		</insert>
+		<insert tableName="mst_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="code" value="UPDATE_USER" />
+			<column name="name" value="UPDATE USER" />
+		</insert>
+		<insert tableName="mst_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="code" value="DELETE_USER" />
+			<column name="name" value="DELETE USER" />
+		</insert>
+		<insert tableName="mst_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="code" value="CREATE_MENU" />
+			<column name="name" value="CREATE MENU" />
+		</insert>
+		<insert tableName="mst_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="code" value="READ_MENU" />
+			<column name="name" value="READ MENU" />
+		</insert>
+		<insert tableName="mst_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="code" value="UPDATE_MENU" />
+			<column name="name" value="UPDATE MENU" />
+		</insert>
+		<insert tableName="mst_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="code" value="DELETE_MENU" />
+			<column name="name" value="DELETE MENU" />
+		</insert>
+		<insert tableName="mst_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="code" value="CREATE_FUNCTION" />
+			<column name="name" value="CREATE FUNCTION" />
+		</insert>
+		<insert tableName="mst_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="code" value="READ_FUNCTION" />
+			<column name="name" value="READ FUNCTION" />
+		</insert>
+		<insert tableName="mst_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="code" value="UPDATE_FUNCTION" />
+			<column name="name" value="UPDATE FUNCTION" />
+		</insert>
+		<insert tableName="mst_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="code" value="DELETE_FUNCTION" />
+			<column name="name" value="DELETE FUNCTION" />
+		</insert>
+		<insert tableName="mst_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="code" value="CREATE_MENU_FUNCTION" />
+			<column name="name" value="CREATE MENU FUNCTION" />
+		</insert>
+		<insert tableName="mst_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="code" value="CREATE_ROLE_FUNCTION" />
+			<column name="name" value="CREATE ROLE FUNCTION" />
+		</insert>
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085201">
+		<insert tableName="mst_menu">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="level" valueNumeric="1" />
+			<column name="code" value="ROLE" />
+			<column name="icon" value="fa fa-users" />
+			<column name="name" value="ROLE" />
+			<column name="sequence" valueNumeric="4" />
+			<column name="url" value="/role" />
+			<column name="parent_id" />
+		</insert>
+		<insert tableName="mst_menu">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="level" valueNumeric="1" />
+			<column name="code" value="USER" />
+			<column name="icon" value="fa fa-user" />
+			<column name="name" value="USER" />
+			<column name="sequence" valueNumeric="5" />
+			<column name="url" value="/user" />
+			<column name="parent_id" />
+		</insert>
+		<insert tableName="mst_menu">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="level" valueNumeric="1" />
+			<column name="code" value="MENU" />
+			<column name="icon" value="fa fa-cube" />
+			<column name="name" value="MENU" />
+			<column name="sequence" valueNumeric="2" />
+			<column name="url" value="/menu" />
+			<column name="parent_id" />
+		</insert>
+		<insert tableName="mst_menu">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="level" valueNumeric="1" />
+			<column name="code" value="FUNCTION" />
+			<column name="icon" value="fa fa-cubes" />
+			<column name="name" value="FUNCTION" />
+			<column name="sequence" valueNumeric="3" />
+			<column name="url" value="/function" />
+			<column name="parent_id" />
+		</insert>
+		<insert tableName="mst_menu">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="level" valueNumeric="1" />
+			<column name="code" value="MAPPING" />
+			<column name="icon" value="fa fa-plus" />
+			<column name="name" value="MAPPING" />
+			<column name="sequence" valueNumeric="6" />
+			<column name="url" />
+			<column name="parent_id" />
+		</insert>
+		<insert tableName="mst_menu">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="level" valueNumeric="2" />
+			<column name="code" value="MENU_FUNCTION" />
+			<column name="icon" value="icon-puzzle" />
+			<column name="name" value="MENU FUNCTION" />
+			<column name="sequence" valueNumeric="1" />
+			<column name="url" value="/mapping/menu-function" />
+			<column name="parent_id"
+				valueComputed="(SELECT m.id FROM mst_menu m WHERE m.code = 'MAPPING')" />
+		</insert>
+		<insert tableName="mst_menu">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="level" valueNumeric="2" />
+			<column name="code" value="ROLE_FUNCTION" />
+			<column name="icon" value="icon-puzzle" />
+			<column name="name" value="ROLE FUNCTION" />
+			<column name="sequence" valueNumeric="2" />
+			<column name="url" value="/mapping/role-function" />
+			<column name="parent_id"
+				valueComputed="(SELECT m.id FROM mst_menu m WHERE m.code = 'MAPPING')" />
+		</insert>
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085202">
+		<insert tableName="role">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="code" value="ADM" />
+			<column name="name" value="ADMIN" />
+		</insert>
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085203">
+		<insert tableName="user">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="language" value="ENGLISH" />
+			<column name="password" value="$2a$10$5YEcU565mE.gJz9zCYaxj.1QM6iW/6QSnSIOcPyzXbHAWqTqMJXje" />
+			<column name="username" value="admin_nexsoft" />
+			<column name="role_id"
+				valueComputed="(SELECT id FROM role WHERE code = 'ADM')" />
+		</insert>
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085204">
+		<insert tableName="map_role_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'CREATE_MENU')" />
+			<column name="role_id"
+				valueComputed="(SELECT id FROM role WHERE code = 'ADM')" />
+		</insert>
+		<insert tableName="map_role_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'READ_MENU')" />
+			<column name="role_id"
+				valueComputed="(SELECT id FROM role WHERE code = 'ADM')" />
+		</insert>
+		<insert tableName="map_role_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'UPDATE_MENU')" />
+			<column name="role_id"
+				valueComputed="(SELECT id FROM role WHERE code = 'ADM')" />
+		</insert>
+		<insert tableName="map_role_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'DELETE_MENU')" />
+			<column name="role_id"
+				valueComputed="(SELECT id FROM role WHERE code = 'ADM')" />
+		</insert>
+		<insert tableName="map_role_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'CREATE_FUNCTION')" />
+			<column name="role_id"
+				valueComputed="(SELECT id FROM role WHERE code = 'ADM')" />
+		</insert>
+		<insert tableName="map_role_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'READ_FUNCTION')" />
+			<column name="role_id"
+				valueComputed="(SELECT id FROM role WHERE code = 'ADM')" />
+		</insert>
+		<insert tableName="map_role_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'UPDATE_FUNCTION')" />
+			<column name="role_id"
+				valueComputed="(SELECT id FROM role WHERE code = 'ADM')" />
+		</insert>
+		<insert tableName="map_role_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'DELETE_FUNCTION')" />
+			<column name="role_id"
+				valueComputed="(SELECT id FROM role WHERE code = 'ADM')" />
+		</insert>
+		<insert tableName="map_role_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'CREATE_ROLE')" />
+			<column name="role_id"
+				valueComputed="(SELECT id FROM role WHERE code = 'ADM')" />
+		</insert>
+		<insert tableName="map_role_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'READ_ROLE')" />
+			<column name="role_id"
+				valueComputed="(SELECT id FROM role WHERE code = 'ADM')" />
+		</insert>
+		<insert tableName="map_role_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'UPDATE_ROLE')" />
+			<column name="role_id"
+				valueComputed="(SELECT id FROM role WHERE code = 'ADM')" />
+		</insert>
+		<insert tableName="map_role_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'DELETE_ROLE')" />
+			<column name="role_id"
+				valueComputed="(SELECT id FROM role WHERE code = 'ADM')" />
+		</insert>
+		<insert tableName="map_role_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'CREATE_USER')" />
+			<column name="role_id"
+				valueComputed="(SELECT id FROM role WHERE code = 'ADM')" />
+		</insert>
+		<insert tableName="map_role_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'READ_USER')" />
+			<column name="role_id"
+				valueComputed="(SELECT id FROM role WHERE code = 'ADM')" />
+		</insert>
+		<insert tableName="map_role_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'UPDATE_USER')" />
+			<column name="role_id"
+				valueComputed="(SELECT id FROM role WHERE code = 'ADM')" />
+		</insert>
+		<insert tableName="map_role_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'DELETE_USER')" />
+			<column name="role_id"
+				valueComputed="(SELECT id FROM role WHERE code = 'ADM')" />
+		</insert>
+		<insert tableName="map_role_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'CREATE_MENU_FUNCTION')" />
+			<column name="role_id"
+				valueComputed="(SELECT id FROM role WHERE code = 'ADM')" />
+		</insert>
+		<insert tableName="map_role_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'CREATE_ROLE_FUNCTION')" />
+			<column name="role_id"
+				valueComputed="(SELECT id FROM role WHERE code = 'ADM')" />
+		</insert>
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085205">
+		<insert tableName="map_menu_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'CREATE_ROLE')" />
+			<column name="menu_id"
+				valueComputed="(SELECT id FROM mst_menu WHERE code = 'ROLE')" />
+		</insert>
+		<insert tableName="map_menu_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'READ_ROLE')" />
+			<column name="menu_id"
+				valueComputed="(SELECT id FROM mst_menu WHERE code = 'ROLE')" />
+		</insert>
+		<insert tableName="map_menu_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'UPDATE_ROLE')" />
+			<column name="menu_id"
+				valueComputed="(SELECT id FROM mst_menu WHERE code = 'ROLE')" />
+		</insert>
+		<insert tableName="map_menu_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'DELETE_ROLE')" />
+			<column name="menu_id"
+				valueComputed="(SELECT id FROM mst_menu WHERE code = 'ROLE')" />
+		</insert>
+		<insert tableName="map_menu_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'CREATE_USER')" />
+			<column name="menu_id"
+				valueComputed="(SELECT id FROM mst_menu WHERE code = 'USER')" />
+		</insert>
+		<insert tableName="map_menu_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'READ_USER')" />
+			<column name="menu_id"
+				valueComputed="(SELECT id FROM mst_menu WHERE code = 'USER')" />
+		</insert>
+		<insert tableName="map_menu_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'UPDATE_USER')" />
+			<column name="menu_id"
+				valueComputed="(SELECT id FROM mst_menu WHERE code = 'USER')" />
+		</insert>
+		<insert tableName="map_menu_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'DELETE_USER')" />
+			<column name="menu_id"
+				valueComputed="(SELECT id FROM mst_menu WHERE code = 'USER')" />
+		</insert>
+		<insert tableName="map_menu_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'CREATE_MENU')" />
+			<column name="menu_id"
+				valueComputed="(SELECT id FROM mst_menu WHERE code = 'MENU')" />
+		</insert>
+		<insert tableName="map_menu_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'READ_MENU')" />
+			<column name="menu_id"
+				valueComputed="(SELECT id FROM mst_menu WHERE code = 'MENU')" />
+		</insert>
+		<insert tableName="map_menu_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'UPDATE_MENU')" />
+			<column name="menu_id"
+				valueComputed="(SELECT id FROM mst_menu WHERE code = 'MENU')" />
+		</insert>
+		<insert tableName="map_menu_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'DELETE_MENU')" />
+			<column name="menu_id"
+				valueComputed="(SELECT id FROM mst_menu WHERE code = 'MENU')" />
+		</insert>
+		<insert tableName="map_menu_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'CREATE_FUNCTION')" />
+			<column name="menu_id"
+				valueComputed="(SELECT id FROM mst_menu WHERE code = 'FUNCTION')" />
+		</insert>
+		<insert tableName="map_menu_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'READ_FUNCTION')" />
+			<column name="menu_id"
+				valueComputed="(SELECT id FROM mst_menu WHERE code = 'FUNCTION')" />
+		</insert>
+		<insert tableName="map_menu_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'UPDATE_FUNCTION')" />
+			<column name="menu_id"
+				valueComputed="(SELECT id FROM mst_menu WHERE code = 'FUNCTION')" />
+		</insert>
+		<insert tableName="map_menu_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'DELETE_FUNCTION')" />
+			<column name="menu_id"
+				valueComputed="(SELECT id FROM mst_menu WHERE code = 'FUNCTION')" />
+		</insert>
+		<insert tableName="map_menu_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'CREATE_MENU_FUNCTION')" />
+			<column name="menu_id"
+				valueComputed="(SELECT id FROM mst_menu WHERE code = 'MENU_FUNCTION')" />
+		</insert>
+		<insert tableName="map_menu_function">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="function_id"
+				valueComputed="(SELECT id FROM mst_function WHERE code = 'CREATE_ROLE_FUNCTION')" />
+			<column name="menu_id"
+				valueComputed="(SELECT id FROM mst_menu WHERE code = 'ROLE_FUNCTION')" />
+		</insert>
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085206">
+		<insert tableName="map_menu_role">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="menu_id"
+				valueComputed="(SELECT id FROM mst_menu WHERE code = 'MENU')" />
+			<column name="role_id"
+				valueComputed="(SELECT id FROM role WHERE code = 'ADM')" />
+		</insert>
+		<insert tableName="map_menu_role">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="menu_id"
+				valueComputed="(SELECT id FROM mst_menu WHERE code = 'FUNCTION')" />
+			<column name="role_id"
+				valueComputed="(SELECT id FROM role WHERE code = 'ADM')" />
+		</insert>
+		<insert tableName="map_menu_role">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="menu_id"
+				valueComputed="(SELECT id FROM mst_menu WHERE code = 'ROLE')" />
+			<column name="role_id"
+				valueComputed="(SELECT id FROM role WHERE code = 'ADM')" />
+		</insert>
+		<insert tableName="map_menu_role">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="menu_id"
+				valueComputed="(SELECT id FROM mst_menu WHERE code = 'MAPPING')" />
+			<column name="role_id"
+				valueComputed="(SELECT id FROM role WHERE code = 'ADM')" />
+		</insert>
+		<insert tableName="map_menu_role">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="menu_id"
+				valueComputed="(SELECT id FROM mst_menu WHERE code = 'MENU_FUNCTION')" />
+			<column name="role_id"
+				valueComputed="(SELECT id FROM role WHERE code = 'ADM')" />
+		</insert>
+		<insert tableName="map_menu_role">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="menu_id"
+				valueComputed="(SELECT id FROM mst_menu WHERE code = 'ROLE_FUNCTION')" />
+			<column name="role_id"
+				valueComputed="(SELECT id FROM role WHERE code = 'ADM')" />
+		</insert>
+		<insert tableName="map_menu_role">
+			<column name="id" autoIncrement="true" />
+			<column name="created_by" value="SYSTEM" />
+			<column name="created_date" valueDate="${now}" />
+			<column name="modified_by" value="SYSTEM" />
+			<column name="modified_date" valueDate="${now}" />
+			<column name="menu_id"
+				valueComputed="(SELECT id FROM mst_menu WHERE code = 'USER')" />
+			<column name="role_id"
+				valueComputed="(SELECT id FROM role WHERE code = 'ADM')" />
+		</insert>
+	</changeSet>
+</databaseChangeLog>

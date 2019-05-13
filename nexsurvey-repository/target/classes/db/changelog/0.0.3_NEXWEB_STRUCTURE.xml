@@ -1,0 +1,142 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV192018P021200">
+		<createTable tableName="document">
+			<column autoIncrement="true" name="id" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="created_by" type="VARCHAR(255)" />
+			<column name="created_date" type="datetime" />
+			<column name="modified_by" type="VARCHAR(255)" />
+			<column name="modified_date" type="datetime" />
+			<column name="name" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="size" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="path" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="doc_type" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV192018P021201">
+		<createTable tableName="member">
+			<column autoIncrement="true" name="id" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="created_by" type="VARCHAR(255)" />
+			<column name="created_date" type="datetime" />
+			<column name="modified_by" type="VARCHAR(255)" />
+			<column name="modified_date" type="datetime" />
+			<column name="full_name" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="status" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="password" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="id_number" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="address" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="city" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="post_code" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="phone_number" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="mobile_phone" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="fax" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="email" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="account_number" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="account_name" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="bank" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="branch" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="taxpayer_id_number" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="taxpayer_name" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="logo_path" type="VARCHAR(255)">
+			</column>
+			<column name="id_card_path" type="VARCHAR(255)">
+			</column>
+			<column name="taxpayer_id_number_path" type="VARCHAR(255)">
+			</column>
+			<column name="role_id" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="language" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV262018A101400">
+		<createTable tableName="event">
+			<column autoIncrement="true" name="id" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="created_by" type="VARCHAR(255)" />
+			<column name="created_date" type="datetime" />
+			<column name="modified_by" type="VARCHAR(255)" />
+			<column name="modified_date" type="datetime" />
+			<column name="name" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="location" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="event_date" type="datetime">
+				<constraints nullable="false" />
+			</column>
+			<column name="description" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-DES212018A094900">
+		<addUniqueConstraint columnNames="id_number"
+			constraintName="unique_member_idnumber" tableName="member" />
+		<addUniqueConstraint columnNames="email"
+			constraintName="unique_member_email" tableName="member" />
+		<addUniqueConstraint columnNames="name"
+			constraintName="unique_event_name" tableName="event" />
+		<addUniqueConstraint columnNames="name"
+			constraintName="unique_document_name" tableName="document" />
+	</changeSet>
+</databaseChangeLog>

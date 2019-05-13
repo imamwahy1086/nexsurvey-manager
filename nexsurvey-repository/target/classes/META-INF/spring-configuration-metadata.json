@@ -1,0 +1,29 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "id.nexcloud.nexsurvey.config.EsProperties",
+      "name": "",
+      "type": "id.nexcloud.nexsurvey.config.EsProperties"
+    },
+    {
+      "sourceType": "id.nexcloud.nexsurvey.config.EsProperties",
+      "name": "elastic-search",
+      "sourceMethod": "public id.nexcloud.nexsurvey.config.EsProperties.ElasticSearch getElasticSearch() ",
+      "type": "id.nexcloud.nexsurvey.config.EsProperties$ElasticSearch"
+    },
+    {
+      "sourceType": "id.nexcloud.nexsurvey.config.DataSourceConfiguration",
+      "name": "spring.datasource.hikari",
+      "sourceMethod": "public javax.sql.DataSource primaryDataSource() ",
+      "type": "javax.sql.DataSource"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "id.nexcloud.nexsurvey.config.EsProperties$ElasticSearch",
+      "name": "elastic-search.enable",
+      "type": "java.lang.Boolean"
+    }
+  ]
+}

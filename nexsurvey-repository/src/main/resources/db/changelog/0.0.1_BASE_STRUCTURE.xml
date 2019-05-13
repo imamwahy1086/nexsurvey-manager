@@ -1,0 +1,291 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+	xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.6.xsd">
+
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085100">
+		<createTable tableName="mst_menu">
+			<column autoIncrement="true" name="id" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="created_by" type="VARCHAR(255)" />
+			<column name="created_date" type="datetime" />
+			<column name="modified_by" type="VARCHAR(255)" />
+			<column name="modified_date" type="datetime" />
+			<column name="level" type="INT">
+				<constraints nullable="false" />
+			</column>
+			<column name="code" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="icon" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="name" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="sequence" type="INT">
+				<constraints nullable="false" />
+			</column>
+			<column name="url" type="VARCHAR(255)" />
+			<column name="parent_id" type="BIGINT" />
+		</createTable>
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085101">
+		<createTable tableName="mst_function">
+			<column autoIncrement="true" name="id" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="created_by" type="VARCHAR(255)" />
+			<column name="created_date" type="datetime" />
+			<column name="modified_by" type="VARCHAR(255)" />
+			<column name="modified_date" type="datetime" />
+			<column name="code" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="name" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085103">
+		<createTable tableName="role">
+			<column autoIncrement="true" name="id" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="created_by" type="VARCHAR(255)" />
+			<column name="created_date" type="datetime" />
+			<column name="modified_by" type="VARCHAR(255)" />
+			<column name="modified_date" type="datetime" />
+			<column name="code" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="name" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085104">
+		<createTable tableName="user">
+			<column autoIncrement="true" name="id" type="BIGINT">
+				<constraints primaryKey="true" primaryKeyName="userPK" />
+			</column>
+			<column name="created_by" type="VARCHAR(255)" />
+			<column name="created_date" type="datetime" />
+			<column name="modified_by" type="VARCHAR(255)" />
+			<column name="modified_date" type="datetime" />
+			<column name="language" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="password" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="username" type="VARCHAR(255)">
+				<constraints nullable="false" />
+			</column>
+			<column name="first_name" type="VARCHAR(255)" />
+			<column name="last_name" type="VARCHAR(255)" />
+			<column name="role_id" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085105">
+		<createTable tableName="map_menu_function">
+			<column autoIncrement="true" name="id" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="created_by" type="VARCHAR(255)" />
+			<column name="created_date" type="datetime" />
+			<column name="modified_by" type="VARCHAR(255)" />
+			<column name="modified_date" type="datetime" />
+			<column name="function_id" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="menu_id" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085106">
+		<createTable tableName="map_menu_role">
+			<column autoIncrement="true" name="id" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="created_by" type="VARCHAR(255)" />
+			<column name="created_date" type="datetime" />
+			<column name="modified_by" type="VARCHAR(255)" />
+			<column name="modified_date" type="datetime" />
+			<column name="menu_id" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="role_id" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085107">
+		<createTable tableName="map_role_function">
+			<column autoIncrement="true" name="id" type="BIGINT">
+				<constraints primaryKey="true" />
+			</column>
+			<column name="created_by" type="VARCHAR(255)" />
+			<column name="created_date" type="datetime" />
+			<column name="modified_by" type="VARCHAR(255)" />
+			<column name="modified_date" type="datetime" />
+			<column name="function_id" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+			<column name="role_id" type="BIGINT">
+				<constraints nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085108">
+		<createIndex indexName="FK1xpmki9yoe7nv7ugfwvf2e4k0"
+			tableName="map_menu_role">
+			<column name="role_id" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085109">
+		<createIndex indexName="FK4fflhrb5xr2ggwrl6kcng6kr1"
+			tableName="map_role_function">
+			<column name="function_id" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085110">
+		<createIndex indexName="FK81vrep5jy6ii80kxquut5bxct"
+			tableName="mst_menu">
+			<column name="parent_id" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085111">
+		<createIndex indexName="FK98o5enptbr5wmallg3ew5ohkh"
+			tableName="map_menu_function">
+			<column name="function_id" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085112">
+		<createIndex indexName="FKlk2hh6ybo4bcnkwrpiv9kglkk"
+			tableName="map_menu_role">
+			<column name="menu_id" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085113">
+		<createIndex indexName="FKq5odaie1u1tmdxdw8j7tb7sb4"
+			tableName="map_role_function">
+			<column name="role_id" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085114">
+		<createIndex indexName="FKqx9j7vg02cdxh6kw7n7jeh81b"
+			tableName="map_menu_function">
+			<column name="menu_id" />
+		</createIndex>
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085115">
+		<addForeignKeyConstraint
+			baseColumnNames="role_id" baseTableName="map_menu_role"
+			constraintName="FK1xpmki9yoe7nv7ugfwvf2e4k0" deferrable="false"
+			initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION"
+			referencedColumnNames="id" referencedTableName="role" validate="true" />
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085116">
+		<addForeignKeyConstraint
+			baseColumnNames="function_id" baseTableName="map_role_function"
+			constraintName="FK4fflhrb5xr2ggwrl6kcng6kr1" deferrable="false"
+			initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION"
+			referencedColumnNames="id" referencedTableName="mst_function"
+			validate="true" />
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085117">
+		<addForeignKeyConstraint
+			baseColumnNames="parent_id" baseTableName="mst_menu"
+			constraintName="FK81vrep5jy6ii80kxquut5bxct" deferrable="false"
+			initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION"
+			referencedColumnNames="id" referencedTableName="mst_menu"
+			validate="true" />
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085118">
+		<addForeignKeyConstraint
+			baseColumnNames="function_id" baseTableName="map_menu_function"
+			constraintName="FK98o5enptbr5wmallg3ew5ohkh" deferrable="false"
+			initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION"
+			referencedColumnNames="id" referencedTableName="mst_function"
+			validate="true" />
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085119">
+		<addForeignKeyConstraint
+			baseColumnNames="menu_id" baseTableName="map_menu_role"
+			constraintName="FKlk2hh6ybo4bcnkwrpiv9kglkk" deferrable="false"
+			initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION"
+			referencedColumnNames="id" referencedTableName="mst_menu"
+			validate="true" />
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085120">
+		<addForeignKeyConstraint
+			baseColumnNames="role_id" baseTableName="map_role_function"
+			constraintName="FKq5odaie1u1tmdxdw8j7tb7sb4" deferrable="false"
+			initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION"
+			referencedColumnNames="id" referencedTableName="role" validate="true" />
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085121">
+		<addForeignKeyConstraint
+			baseColumnNames="menu_id" baseTableName="map_menu_function"
+			constraintName="FKqx9j7vg02cdxh6kw7n7jeh81b" deferrable="false"
+			initiallyDeferred="false" onDelete="NO ACTION" onUpdate="NO ACTION"
+			referencedColumnNames="id" referencedTableName="mst_menu"
+			validate="true" />
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085122">
+		<addForeignKeyConstraint
+			baseColumnNames="role_id" baseTableName="user"
+			constraintName="FKn82ha3ccdebhokx3a8fgdqeyy" deferrable="false"
+			initiallyDeferred="false" referencedColumnNames="id"
+			referencedTableName="role" validate="true" />
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085123">
+		<addUniqueConstraint columnNames="code"
+			constraintName="unique_mstmenu_code" tableName="mst_menu" />
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085124">
+		<addUniqueConstraint columnNames="code"
+			constraintName="unique_mstfunction_code" tableName="mst_function" />
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085125">
+		<addUniqueConstraint columnNames="code"
+			constraintName="unique_role_code" tableName="role" />
+	</changeSet>
+	<changeSet author="user (generated)"
+		id="NEXWEB-NOV072018A085126">
+		<addUniqueConstraint columnNames="username"
+			constraintName="unique_user_username" tableName="user" />
+	</changeSet>
+</databaseChangeLog>

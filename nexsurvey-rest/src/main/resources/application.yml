@@ -1,0 +1,25 @@
+# Logger
+logging:
+  config: classpath:logback-spring.xml
+server:
+  servlet:
+    context-path: /nexsurvey
+spring:
+  profiles:
+    active:
+    - "@activeProfile@"
+    include:
+    - security
+    - repository
+  messages:
+    basename: i18n/messages
+    cache-duration: 3600s
+    encoding: UTF-8
+    fallbackToSystemLocale: true
+  data:
+    web:
+      pageable:
+        default-page-size: 10
+  servlet:
+    multipart:
+      max-file-size: 5MB

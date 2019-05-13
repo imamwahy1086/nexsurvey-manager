@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    hikari:
+      jdbc-url: ${nexsurvey.mysql.url}
+      username: ${nexsurvey.mysql.username}
+      password: ${nexsurvey.mysql.password}
+      driver-class-name: com.mysql.jdbc.Driver
+      connection-test-query: select 1
+      idle-timeout: 120000
+      maximum-pool-size: 10
+  jpa:
+    hibernate:
+      ddl-auto: none
+      use-new-id-generator-mappings: true
+    properties:
+      hibernate-dialect: org.hibernate.dialect.MySQL5InnoDBDialect
+      entity-base-package: id.nexcloud.nexsurvey.entity.jpa
+      show-sql: true
+  liquibase:
+    change-log: classpath:/db/changelog-master.xml
+    enabled: true

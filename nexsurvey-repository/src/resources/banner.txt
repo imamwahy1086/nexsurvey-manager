@@ -1,0 +1,15 @@
+
+___      ___                    ____              ___          ___       
+`MM\     `M'                    `Mb(      db      )d'           MM       
+ MMM\     M                      YM.     ,PM.     ,P            MM       
+ M\MM\    M   ____   ____   ___  `Mb     d'Mb     d'    ____    MM____   
+ M \MM\   M  6MMMMb  `MM(   )P'   YM.   ,P YM.   ,P    6MMMMb   MMMMMMb  
+ M  \MM\  M 6M'  `Mb  `MM` ,P     `Mb   d' `Mb   d'   6M'  `Mb  MM'  `Mb 
+ M   \MM\ M MM    MM   `MM,P       YM. ,P   YM. ,P    MM    MM  MM    MM 
+ M    \MM\M MMMMMMMM    `MM.       `Mb d'   `Mb d'    MMMMMMMM  MM    MM 
+ M     \MMM MM          d`MM.       YM,P     YM,P     MM        MM    MM 
+ M      \MM YM    d9   d' `MM.      `MM'     `MM'     YM    d9  MM.  ,M9 
+_M_      \M  YMMMM9  _d_  _)MM_      YP       YP       YMMMM9  _MYMMMM9  
+
+                      Copyright © 2018 NexSoft Indonesia
+                      

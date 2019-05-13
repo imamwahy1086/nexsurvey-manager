@@ -1,0 +1,5 @@
+spring:
+  redis:
+    host: ${nexsurvey.redis.host}
+    port: ${nexsurvey.redis.port}
+    database: ${nexsurvey.redis.database}
